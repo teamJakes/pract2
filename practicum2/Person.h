@@ -40,7 +40,7 @@ using namespace std;
     virtual float getGPA();
     virtual int getGradYear();
     virtual string getMajor();
-    virtual int getSalary();
+    virtual int getSalary()
     virtual bool getTenureStatus();
     virtual string getDepartment();
     
