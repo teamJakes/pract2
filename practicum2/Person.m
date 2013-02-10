@@ -8,7 +8,7 @@
 
 @implementation Person
 
-@synthesize
+@synthesize firstName, lastName, IDNum, isStudent;
 
 // Constructor
 // Parameters: none
@@ -16,77 +16,62 @@
 // Precondition: none
 // Postcondition: none
 // Algorithm: constructs the object without properties
-Person::Person() {
-}
-Person::~Person() {
+
+
+-(id) init
+{
+    if(self = [super init])
+    {
+        return(self);
+    }
+return nil;
 }
 
-// Accessor functions of Person
-string Person::getFirstName(){
-    return firstName;
-}
-string Person::getLastName(){
-    return lastName;
-}
-int Person::getIDNum(){
-    return IDNum;
-}
-bool Person::getStatus(){
-    return isStudent;
-}
-
-// Accessor methods of potential child classes of Person
-float Person::getGPA(){
-    
-}
-
-int Person::getGradYear(){
-    
-}
-string Person::getMajor(){
-    
-}
-int Person::getSalary(){
-    
-}
-bool Person::getTenureStatus(){
-    
-}
-string Person::getDepartment(){
-    
-}
-
-// Mutator functions of potential child classes of Person
-void Person::setSalary(int newSalary){
-    
-}
-void Person::setTenureStatus(bool newStatus){
-    
-}
-void Person::setDepartment(string newDepartment){
-    
-}
-void Person::setGPA(int newGPA){
-    
-}
-void Person::setGradYear(int newGradYear){
-    
-}
-void Person::setMajor(string newMajor){
-    
-}
- 
-
+/*
 // Mutator functions of Person
+
+-(void) setFirstName:(NSString *)newFirstName;
+{
+    firstName = newFirstName;
+}
+
 void Person::setFirstName(string newFirstName){
     firstName = newFirstName;
 }
+ 
+
+
+- (void) setLastName: (NSString *) newLastName;
+{
+    lastName = newLastName;
+}
+
+
 void Person::setLastName(string newLastName){
     lastName = newLastName;
 }
+ 
+
+
+-(void) setIDNum:(int)newIDNum;
+{
+    IDNum = newIDNum;
+}
+
+
 void Person::setIDNum(int newIDNum){
     IDNum = newIDNum;
 }
+ 
+
+
+- (void) setStatus:(bool)newIsStudent;
+{
+    isStudent = newIsStudent;
+}
+
+
 void Person::setStatus(bool newIsStudent){
     isStudent = newIsStudent;
 }
+*/

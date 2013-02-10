@@ -9,9 +9,9 @@
 #ifndef PERSON_H
 #define	PERSON_H
 
-#include <string>
+
 #include <foundation/foundation.h>
-using namespace std;
+
 
 @interface Person : NSObject {
     // Constructs the object
@@ -54,7 +54,7 @@ using namespace std;
     ********************************************************************/ 
 	
 	// Mutator signatures of Person
-
+/*
 -(void) setFirstName: (NSString *) newFirstName;
     //void setFirstName(string newFirstName);
 -(void) setLastName: (NSString *) newLastName;
@@ -63,6 +63,8 @@ using namespace std;
     //void setIDNum(int newIDNum);
 -(void) setStatus: (bool) newIsStudent;
     //void setStatus(bool newIsStudent);
+ */
+
  
     
 @end
