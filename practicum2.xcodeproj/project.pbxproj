@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4211090616C810340090A2A9 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		421BF91716C6EF1300FD7852 /* practicum2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = practicum2; sourceTree = BUILT_PRODUCTS_DIR; };
 		421BF91A16C6EF1300FD7852 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		421BF91D16C6EF1300FD7852 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		421BF91C16C6EF1300FD7852 /* practicum2 */ = {
 			isa = PBXGroup;
 			children = (
+				4211090616C810340090A2A9 /* Person.h */,
 				421BF91D16C6EF1300FD7852 /* main.m */,
 				421BF92116C6EF1300FD7852 /* practicum2.1 */,
 				421BF91F16C6EF1300FD7852 /* Supporting Files */,
@@ -242,6 +244,7 @@
 				421BF92716C6EF1300FD7852 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
