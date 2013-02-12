@@ -32,26 +32,8 @@
 
 -(id) init;
 
--(id) initWithFirst: (NSString*) a andLast: (NSString*) b andID: (int) c andIs: (bool) d;
+//-(id) initWithFirst: (NSString*) a andLast: (NSString*) b andID: (int) c andIs: (bool) d;
 
-
-/*******************virtual don't need**********************************
-	// Accessor signatures of potential child objects of Person 
-    virtual float getGPA();
-    virtual int getGradYear();jkejflksjflejfowehfwehfoewhfewhfkjfhkfhekjfhkwefhwekjfhwek
-    virtual string getMajor();
-    virtual int getSalary()
-    virtual bool getTenureStatus();
-    virtual string getDepartment();
-    
-	// Mutator signatures of potential child classes of Person
-    virtual void setSalary(int newSalary);
-    virtual void setTenureStatus(bool newStatus);
-    virtual void setDepartment(string newDepartment);
-    virtual void setGPA(int newGPA);
-    virtual void setGradYear(int newGradYear);
-    virtual void setMajor(string newMajor);
-    ********************************************************************/ 
 	
 	// Mutator signatures of Person
 /*
