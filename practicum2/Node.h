@@ -17,8 +17,10 @@ typedef Person ListItemType;
 
 //properties
 @property (nonatomic, assign) ListItemType data;
-@property (nonatomic, assign) Node *next;
+@property (nonatomic, retain) Node *next;
 
 - (id) init;
+
+- (id) initWithData: (ListItemType) a andNext: (Node *) b;
 
 @end

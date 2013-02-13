@@ -23,4 +23,13 @@
     return nil;
 }
 
+- (id) initWithData: (ListItemType) a andNext: (Node *) b
+{
+    if (self = [super init]) {
+        next = b;
+        data = a;
+        return (self);
+    }
+    return nil;
+}
 @end
