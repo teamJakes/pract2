@@ -22,6 +22,10 @@
 {
     if(self = [super init])
     {
+        firstName = @"John";
+        lastName = @"Smith";
+        IDNum = 000000;
+        isStudent = false;
         return(self);
     }
 return nil;
@@ -75,3 +79,5 @@ void Person::setStatus(bool newIsStudent){
     isStudent = newIsStudent;
 }
 */
+@end
+
