@@ -1,10 +1,7 @@
-//
-//  Node.h
-//  Practicum_2
-//
-//  Created by Katharine E Levittan on 2/12/13.
-//  Copyright (c) 2013 Ithaca College. All rights reserved.
-//
+/* Original Author: Unknown
+ * Refactored to Objective-C: Katie Levittan
+ * Date Last Modified: 2/12/2013
+ */
 
 #import <Foundation/Foundation.h>
 #import "Student.h"
