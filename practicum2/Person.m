@@ -4,7 +4,7 @@
 // Purpose: Creates an instance of an object that holds a first and last
 // name, and an identification number.
 
-#include "Person.h"
+#import "Person.h"
 
 @implementation Person
 
@@ -31,53 +31,5 @@
 return nil;
 }
 
-/*
-// Mutator functions of Person
-
--(void) setFirstName:(NSString *)newFirstName;
-{
-    firstName = newFirstName;
-}
-
-void Person::setFirstName(string newFirstName){
-    firstName = newFirstName;
-}
- 
-
-
-- (void) setLastName: (NSString *) newLastName;
-{
-    lastName = newLastName;
-}
-
-
-void Person::setLastName(string newLastName){
-    lastName = newLastName;
-}
- 
-
-
--(void) setIDNum:(int)newIDNum;
-{
-    IDNum = newIDNum;
-}
-
-
-void Person::setIDNum(int newIDNum){
-    IDNum = newIDNum;
-}
- 
-
-
-- (void) setStatus:(bool)newIsStudent;
-{
-    isStudent = newIsStudent;
-}
-
-
-void Person::setStatus(bool newIsStudent){
-    isStudent = newIsStudent;
-}
-*/
 @end
 

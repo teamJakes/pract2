@@ -10,7 +10,7 @@
 #define	PERSON_H
 
 
-#include <foundation/foundation.h>
+#import <foundation/foundation.h>
 
 
 @interface Person : NSObject {
@@ -32,25 +32,12 @@
 
 -(id) init;
 
-//-(id) initWithFirst: (NSString*) a andLast: (NSString*) b andID: (int) c andIs: (bool) d;
 
-	
-	// Mutator signatures of Person
-/*
--(void) setFirstName: (NSString *) newFirstName;
-    //void setFirstName(string newFirstName);
--(void) setLastName: (NSString *) newLastName;
-    //void setLastName(string newLastName);
--(void) setIDNum: (int) newIDNum;
-    //void setIDNum(int newIDNum);
--(void) setStatus: (bool) newIsStudent;
-    //void setStatus(bool newIsStudent);
- */
 
  
     
 @end
-    // Properties of Person
+    
 	
     
 
