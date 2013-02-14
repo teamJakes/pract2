@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D27785616CC69CD00434DE4 /* Professor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D27785516CC69CD00434DE4 /* Professor.m */; };
+		3D27785916CC6A1E00434DE4 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D27785816CC6A1E00434DE4 /* Student.m */; };
+		3D27785B16CC6A2800434DE4 /* myList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D27785A16CC6A2800434DE4 /* myList.m */; };
+		3D27786116CC6A8000434DE4 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D27786016CC6A8000434DE4 /* Node.m */; };
 		4211090816C811960090A2A9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4211090716C811960090A2A9 /* Person.m */; };
 		421BF91B16C6EF1300FD7852 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421BF91A16C6EF1300FD7852 /* Foundation.framework */; };
 		421BF91E16C6EF1300FD7852 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 421BF91D16C6EF1300FD7852 /* main.m */; };
@@ -27,6 +31,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3D27785516CC69CD00434DE4 /* Professor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Professor.m; sourceTree = "<group>"; };
+		3D27785716CC69FB00434DE4 /* Professor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Professor.h; sourceTree = "<group>"; };
+		3D27785816CC6A1E00434DE4 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		3D27785A16CC6A2800434DE4 /* myList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myList.m; sourceTree = "<group>"; };
+		3D27785E16CC6A5100434DE4 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		3D27785F16CC6A5F00434DE4 /* myList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myList.h; sourceTree = "<group>"; };
+		3D27786016CC6A8000434DE4 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		3D27786216CC6A8F00434DE4 /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		4211090616C810340090A2A9 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		4211090716C811960090A2A9 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		421BF91716C6EF1300FD7852 /* practicum2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = practicum2; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +88,14 @@
 		421BF91C16C6EF1300FD7852 /* practicum2 */ = {
 			isa = PBXGroup;
 			children = (
+				3D27785716CC69FB00434DE4 /* Professor.h */,
+				3D27785516CC69CD00434DE4 /* Professor.m */,
+				3D27785E16CC6A5100434DE4 /* Student.h */,
+				3D27785816CC6A1E00434DE4 /* Student.m */,
+				3D27785F16CC6A5F00434DE4 /* myList.h */,
+				3D27785A16CC6A2800434DE4 /* myList.m */,
+				3D27786216CC6A8F00434DE4 /* Node.h */,
+				3D27786016CC6A8000434DE4 /* Node.m */,
 				4211090616C810340090A2A9 /* Person.h */,
 				4211090716C811960090A2A9 /* Person.m */,
 				421BF91D16C6EF1300FD7852 /* main.m */,
@@ -146,6 +166,10 @@
 			files = (
 				421BF91E16C6EF1300FD7852 /* main.m in Sources */,
 				4211090816C811960090A2A9 /* Person.m in Sources */,
+				3D27785616CC69CD00434DE4 /* Professor.m in Sources */,
+				3D27785916CC6A1E00434DE4 /* Student.m in Sources */,
+				3D27785B16CC6A2800434DE4 /* myList.m in Sources */,
+				3D27786116CC6A8000434DE4 /* Node.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

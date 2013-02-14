@@ -23,8 +23,23 @@
     if(self = [super init])
     {
         return(self);
+    } else {
+        return nil;
     }
-return nil;
+}
+
+-(id) initWithFirst: (NSString*) a andLast: (NSString*) b andID: (int) c andIs: (bool) d
+{
+    if(self = [super init])
+    {
+        firstName = a;
+        lastName = b;
+        IDNum = c;
+        isStudent = d;
+        return(self);
+    } else {
+        return nil;
+    }
 }
 
 /*
@@ -75,3 +90,4 @@ void Person::setStatus(bool newIsStudent){
     isStudent = newIsStudent;
 }
 */
+@end

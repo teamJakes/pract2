@@ -11,7 +11,7 @@
 
 
 #include <foundation/foundation.h>
-
+@class Person;
 
 @interface Person : NSObject {
     // Constructs the object

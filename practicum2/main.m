@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "myList.h"
+#import "Student.h"
+#import "Professor.h"
 
 /* Name: main function
  * Purpose: Asks the user which of 5 choices they want to do, including adding a student, removing
@@ -60,12 +62,12 @@ int main(int argc, const char * argv[]) {
             printf("5. Print all people");
             
             //holds the user's choice
-            scanf(%d, choice);
+            scanf("%d", &choice);
             
             //error checking for choice
             while ((choice < 1) || (choice > 5)) {
                 printf("Invalid input. Please enter another number.");
-                scanf(%d, choice);
+                scanf("%d", &choice);
             }
             printf("");
             
@@ -85,31 +87,31 @@ int main(int argc, const char * argv[]) {
                 
                 //ask user for first name
                 printf("Enter a first name for the new person: ");
-                scanf(%s, firstName);
+                scanf("%s", &firstName);
                 
                 //reduce first name to lower case
                 firstName = [firstName lowercaseString];
                 
                 //ask user for last name
                 printf("Enter a last name for the new student: ");
-                scanf(%s, lastName);
+                scanf("%s", &lastName);
                 
                 //reduce last name to lower case
                 lastName = [lastName lowercaseString];
                 
                 //ask user for ID number
                 printf("Enter the student's ID number [greater than 0]: ");
-                scanf(%d, ID);
+                scanf("%d", &ID);
                 
                 //error checking for ID number
                 while (ID < 0) {
                     printf("Invalid ID number. Please enter a new ID number [greater than 0]: ");
-                    scanf(%d, ID);
+                    scanf("%d", &ID);
                 }
                 
                 //ask user if it is a student or a professor that is being added
                 printf("Enter 's' if it is a student, enter 'p' if it is a professor: ");
-                scanf(%s, personVar);
+                scanf("%s", &personVar);
                 
                 //reduce the response to lowercase
                 personVar = [personVar lowercaseString];
@@ -124,42 +126,42 @@ int main(int argc, const char * argv[]) {
                     
                     //ask user for GPA
                     printf("Enter the student's GPA [greater than 0/less than or equal to 5]: ");
-                    scanf(%f, GPA);
+                    scanf("%f", &GPA);
                     
                     //error checking for GPA
                     while (GPA < 0 || GPA > 5) {
                         printf("Invalid GPA. Please enter a GPA [greater than 0/less than or equal to 5]: ");
-                        scanf(%f, GPA);
+                        scanf("%f", &GPA);
                     }
                     
                     //ask user for major
                     printf("Enter a major for the new student: ");
-                    scanf(%s, major);
+                    scanf("%s", &major);
                     
                     //reduce the response to lowercase
                     major = [major lowercaseString];
                     
                     //ask user for graduation year
                     printf("Enter the student's graduation year [greater than 0]: ");
-                    scanf(%d, year);
+                    scanf("%d", &year);
                     
                     //error checking for graduation year
                     while (year < 0) {
                         printf("Invalid year. Please enter a new year [greater than 0]: ");
-                        scanf(%d, year);
+                        scanf("%d", &year);
                     }
                     
                     //set status to true because it is a student
                     status = YES;
                     
                     //sets the first name, last name, ID, GPA, Major, Graduation Year, and Status of the student based on user input
-                    setFirstName = [theStudent firstName];
-                    setLastName = [theStudent lastName];
-                    setIDNum = [theStudent ID];
-                    setGPA = [theStudent GPA];
-                    setMajor = [theStudent major];
-                    setGradYear = [theStudent year];
-                    setStatus = [theStudent status];
+                    [theStudent setFirstName: firstName];
+                    [theStudent setLastName: lastName];
+                    [theStudent setIDNum: ID];
+                    [theStudent setGradePA: GPA];
+                    [theStudent setMajor: major];
+                    [theStudent setGradYear: year];
+                    [theStudent setIsStudent: status];
                     
                     //inserts the new student into the list
                     worked = [students insert: theStudent at: [students getLength] + 1];
@@ -181,7 +183,7 @@ int main(int argc, const char * argv[]) {
                     
                     //ask the user for tenure (yes or no)
                     printf("Does the professor have tenure? Enter 'y' for yes or 'n' for no:");
-                    scanf(%s, response);
+                    scanf("%s", &response);
                     
                     //set the tenure variable and perform error checking
                     if (response == 'y' || response == 'Y') {
@@ -192,18 +194,18 @@ int main(int argc, const char * argv[]) {
                     
                     //ask the user for a salary
                     printf("Enter a salary for the professor:");
-                    scanf(%d, salary);
+                    scanf("%d", &salary);
                     
                     //error checking for salary
                     while (salary < 0) {
                         printf("Invalid salary, must be greater than or equal to 0. Re-enter:");
-                        scanf(%d, salary);
+                        scanf("%d", &salary);
                     }
                     
-                    NSLog(@"Salary is: %@", salary);
+                    NSLog(@"Salary is: %d", salary);
                     //ask user for a department
                     printf("Enter a department for the professor:");
-                    scanf(%s, department);
+                    scanf("%s", &department);
                     
                     //reduce the response to lowercase
                     department = [department lowercaseString];
@@ -214,13 +216,13 @@ int main(int argc, const char * argv[]) {
                     
                     //sets the first name, last name, ID, Salary, Tenure, Department, and Status of the teacher based on user input
                     
-                    setFirstName = [theProfessor firstName];
-                    setLastName = [theProfessor lastName];
-                    setIDNum = [theProfessor ID];
-                    setSalary = [theProfessor salary];
-                    setTenureStatus = [theProfessor tenure];
-                    setDepartment = [theProfessor department];
-                    setStatus = [theProfessor status];
+                    [theProfessor setFirstName: firstName];
+                    [theProfessor setLastName: lastName];
+                    [theProfessor setIDNum: ID];
+                    [theProfessor setSalary: salary];
+                    [theProfessor setTenure: tenure];
+                    [theProfessor setDepartment: department];
+                    [theProfessor setIsStudent:status];
                     
                     //inserts the new teacher into the list
                     worked = [students insert: theProfessor at: [students getLength] + 1];
@@ -240,12 +242,12 @@ int main(int argc, const char * argv[]) {
                 
                 //ask user for the ID number of the person to find
                 printf("Enter an ID for the person to remove: ");
-                scanf(%d, ID);
+                scanf("%d", &ID);
                 
                 //traverse the list and find the correct ID number
                 for (int i = 1; i < [students getLength] + 1; i++) {
                     [students retrieve: oldStudent at: i];
-                    if ([oldStudent getIDNum:[Student Class]] == ID) {
+                    if (ID == oldStudent.IDNum) {
                         index = i;
                     }
                 }
@@ -255,12 +257,12 @@ int main(int argc, const char * argv[]) {
                     
                     //if not fould, ask for a different ID number
                     printf("Invalid student ID. Please enter a new ID: ");
-                    scanf(%d, ID);
+                    scanf("%d", &ID);
                     
                     //traverse the list and find the new ID number
                     for (int i = 1; i < [students getLength] + 1; i++) {
                         [students retrieve: oldStudent at: i];
-                        if ([oldStudent getIDNum:[Student Class]] == ID) {
+                        if (ID == oldStudent.IDNum) {
                             index = i;
                         }
                     }
@@ -285,12 +287,12 @@ int main(int argc, const char * argv[]) {
                 
                 //ask user for the ID of the person to find
                 printf("Enter the ID of the person to print: ");
-                scanf(%d, ID);
+                scanf("%d", &ID);
                 
                 //traverse the list to find the correct ID number
                 for (int i = 1; i < [students getLength] + 1; i++) {
                     [students retrieve: oldStudent at: i];
-                    if ([oldStudent getIDNum:[Student Class]] == ID) {
+                    if (ID == oldStudent.IDNum) {
                         index = i;
                     }
                 }
@@ -300,12 +302,12 @@ int main(int argc, const char * argv[]) {
                     
                     //if not found, ask user for a new ID number
                     printf("Invalid student ID. Please enter a new ID: ");
-                    scanf(%d, ID);
+                    scanf("%d", &ID);
                     
                     //traverse the list and find the new ID number
                     for (int i = 1; i < [students getLength] + 1; i++) {
                         [students retrieve: oldStudent at: i];
-                        if ([oldStudent getIDNum:[StudentClass]] == ID) {
+                        if(ID == oldStudent.IDNum) {
                             index = i;
                         }
                     }
@@ -318,76 +320,76 @@ int main(int argc, const char * argv[]) {
                 if (worked) {
                     
                     //print first name, last name, and ID, common to all people in the list
-                    NSLog(@"First Name: %@", [oldStudent getFirstName:[Student Class]]);
-                    NSLog(@"Last Name: %@", [oldStudent getLastName:[Student Class]]);
-                    NSLog(@"ID: %@", [oldStudent getIDNum:[StudentClass]]);
+                    NSLog(@"First Name: %@", oldStudent.firstName);
+                    NSLog(@"Last Name: %@", oldStudent.lastName);
+                    NSLog(@"ID: %d", oldStudent.IDNum);
                     
                     //if the person is a student...
                     if ([oldStudent getStatus:[Student Class]] == YES) {
                         NSLog(@"Major: %@", [oldStudent getMajor:[Student Class]];
                         NSLog(@"Graduation Year: %@", [oldStudent getGradYear:[Student]]);
-                        } else { //if the person is a teacher...
+                    } else { //if the person is a teacher...
                                   
                         //print Tenure, Salary, and Department
                         NSLog(@"Tenure: %@", [oldStudent getTenureStatus:[Student Class]]);
                         NSLog(@"Salary: %@", [oldStudent getSalary:[Student Class]]);
                         NSLog(@"Department: %@", [oldStudent getDepartment:[Student Class]]);
                                   
-                        }
+                    }
                               
-                    } else { //displays error if it failed
+                } else { //displays error if it failed
+                    printf("Retreive failed");
+                }
+            } else if (choice == 5) { //displays all the people in the list
+                
+                //prints all the people's info
+                printf("People:");
+                                  
+                //traverse the list, getting and displaying info for all people
+                for (int i = 1; i < [students getLength] + 1; i++) {
+                                      
+                    worked = [students retrieve: oldStudent at: i];
+                                      
+                    //if it was successful in finding someone...
+                    if (worked) {
+                                          
+                        //print First Name, Last Name, and ID Number, common to all people
+                        NSLog(@"First Name: %@", [oldStudent getFirstName:[Student Class]]);
+                        NSLog(@"Last Name: %@", [oldStudent getLastName:[Student Class]]);
+                        NSLog(@"ID: %@", [oldStudent getIDNum:[Student Class]]);
+                                          
+                        //if the person is a student...
+                        if ([oldStudent getStatus:[Student class]] == YES) {
+                                              
+                            //print GPA, Major, and Graduation Year
+                            NSLog(@"GPA: %@", [oldStudent getGPA:[Student Class]]);
+                            NSLog(@"Major: %@", [oldStudent getMajor:[Student Class]]);
+                            NSLog(@"Graduation Year: %@", [oldStudent getGradYear:[Student Class]]);
+                                              
+                        } else { //if the person is a teacher...
+                                              
+                            //print Tenure, Salary, and Department
+                            
+                            NSLog(@"", [oldStudent getTenureStatus:[Student Class]]);
+                            if ([oldStudent getTenureStatus:[Student class]]) {
+                                printf("Tenure: yes");
+                            } else {
+                                printf("Tenure: no");
+                            }
+                            NSLog(@"Salary: %@", [oldStudent getSalary:[Student Class]]);
+                            NSLog(@"Department: %@", [oldStudent getDepartment:[Student Class]]);
+                        }
+                        
+                    } else { //if there was an error in finding people, print error
                         printf("Retreive failed");
                     }
-                } else if (choice == 5) { //displays all the people in the list
-                                  
-                    //prints all the people's info
-                    printf("People:");
-                                  
-                    //traverse the list, getting and displaying info for all people
-                    for (int i = 1; i < [students getLength] + 1; i++) {
-                                      
-                        worked = [students retrieve: oldStudent at: i];
-                                      
-                        //if it was successful in finding someone...
-                        if (worked) {
-                                          
-                            //print First Name, Last Name, and ID Number, common to all people
-                            NSLog(@"First Name: %@", [oldStudent getFirstName:[Student Class]]);
-                            NSLog(@"Last Name: %@", [oldStudent getLastName:[Student Class]]);
-                            NSLog(@"ID: %@", [oldStudent getIDNum:[Student Class]]);
-                                          
-                            //if the person is a student...
-                            if ([oldStudent getStatus:[Student class]] == YES) {
-                                              
-                                //print GPA, Major, and Graduation Year
-                                NSLog(@"GPA: %@", [oldStudent getGPA:[Student Class]]);
-                                NSLog(@"Major: %@", [oldStudent getMajor:[Student Class]]);
-                                NSLog(@"Graduation Year: %@", [oldStudent getGradYear:[Student Class]]);
-                                              
-                            } else { //if the person is a teacher...
-                                              
-                                //print Tenure, Salary, and Department
-                                              
-                                NSLog(@"", [oldStudent getTenureStatus:[Student Class]]);
-                                if ([oldStudent getTenureStatus:[Student class]]) {
-                                    printf("Tenure: yes");
-                                } else {
-                                    printf("Tenure: no");
-                                }
-                                NSLog(@"Salary: %@", [oldStudent getSalary:[Student Class]]);
-                                NSLog(@"Department: %@", [oldStudent getDepartment:[Student Class]]);
-                            }
-                                          
-                        } else { //if there was an error in finding people, print error
-                            printf("Retreive failed");
-                        }
-                        printf("");
-                    }
+                    printf("");
                 }
-                //loops back through the choices if the user wants to make another selection
-                printf("");
-                printf("Would you like to make another selection? [y/n]: ");
-                scanf(%s, answer);
             }
-            return 0;
-        } //end of file
+            //loops back through the choices if the user wants to make another selection
+            printf("");
+            printf("Would you like to make another selection? [y/n]: ");
+            scanf(%s, answer);
+        }
+        return 0;
+    } //end of file
