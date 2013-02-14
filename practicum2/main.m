@@ -245,7 +245,7 @@ int main(int argc, const char * argv[]) {
                 //traverse the list and find the correct ID number
                 for (int i = 1; i < [students getLength] + 1; i++) {
                     [students retrieve: oldStudent at: i];
-                    if ((getIDNum = [oldStudent]) == ID) {
+                    if ([oldStudent getIDNum:[Student Class]] == ID) {
                         index = i;
                     }
                 }
@@ -260,7 +260,7 @@ int main(int argc, const char * argv[]) {
                     //traverse the list and find the new ID number
                     for (int i = 1; i < [students getLength] + 1; i++) {
                         [students retrieve: oldStudent at: i];
-                        if ((getIDNum = [oldStudent]) == ID) {
+                        if ([oldStudent getIDNum:[Student Class]] == ID) {
                             index = i;
                         }
                     }
@@ -290,7 +290,7 @@ int main(int argc, const char * argv[]) {
                 //traverse the list to find the correct ID number
                 for (int i = 1; i < [students getLength] + 1; i++) {
                     [students retrieve: oldStudent at: i];
-                    if ((getIDNum = [oldStudent]) == ID) {
+                    if ([oldStudent getIDNum:[Student Class]] == ID) {
                         index = i;
                     }
                 }
@@ -305,7 +305,7 @@ int main(int argc, const char * argv[]) {
                     //traverse the list and find the new ID number
                     for (int i = 1; i < [students getLength] + 1; i++) {
                         [students retrieve: oldStudent at: i];
-                        if ((getIDNum = [oldStudent]) == ID) {
+                        if ([oldStudent getIDNum:[StudentClass]] == ID) {
                             index = i;
                         }
                     }
@@ -318,77 +318,76 @@ int main(int argc, const char * argv[]) {
                 if (worked) {
                     
                     //print first name, last name, and ID, common to all people in the list
-                    NSLog(@"First Name: %@", (getFirstName = [oldStudent]);
-                          NSLog(@"Last Name: %@", (getLastName = [oldStudent]);
-                                NSLog(@"ID: %@", (getIDNum = [oldStudent]);
+                    NSLog(@"First Name: %@", [oldStudent getFirstName:[Student Class]]);
+                    NSLog(@"Last Name: %@", [oldStudent getLastName:[Student Class]]);
+                    NSLog(@"ID: %@", [oldStudent getIDNum:[StudentClass]]);
+                    
+                    //if the person is a student...
+                    if ([oldStudent getStatus:[Student Class]] == YES) {
+                        NSLog(@"Major: %@", [oldStudent getMajor:[Student Class]];
+                        NSLog(@"Graduation Year: %@", [oldStudent getGradYear:[Student]]);
+                        } else { //if the person is a teacher...
+                                  
+                        //print Tenure, Salary, and Department
+                        NSLog(@"Tenure: %@", [oldStudent getTenureStatus:[Student Class]]);
+                        NSLog(@"Salary: %@", [oldStudent getSalary:[Student Class]]);
+                        NSLog(@"Department: %@", [oldStudent getDepartment:[Student Class]]);
+                                  
+                        }
+                              
+                    } else { //displays error if it failed
+                        printf("Retreive failed");
+                    }
+                } else if (choice == 5) { //displays all the people in the list
+                                  
+                    //prints all the people's info
+                    printf("People:");
+                                  
+                    //traverse the list, getting and displaying info for all people
+                    for (int i = 1; i < [students getLength] + 1; i++) {
                                       
-                                      //if the person is a student...
-                                      if ((getStatus = [oldStudent]) == YES) {
-                                          NSLog(@"Major: %@", (getMajor = [oldStudent]);
-                                                NSLog(@"Graduation Year: %@", (getGradYear = [oldStudent]);
-                                                      
-                                                      } else { //if the person is a teacher...
-                                                          
-                                                          //print Tenure, Salary, and Department
-                                                          NSLog(@"Tenure: %@", (getTenureStatus = [oldStudent]);
-                                                                NSLog(@"Salary: %@", (getSalary = [oldStudent]);
-                                                                      NSLog(@"Department: %@", (getDepartment = [oldStudent]);
-                                                                            
-                                                                            }
-                                                                            
-                                                                            } else { //displays error if it failed
-                                                                                printf("Retreive failed");
-                                                                            }
-                                                                            } else if (choice == 5) { //displays all the people in the list
-                                                                                
-                                                                                //prints all the people's info
-                                                                                printf("People:");
-                                                                                
-                                                                                //traverse the list, getting and displaying info for all people
-                                                                                for (int i = 1; i < [students getLength] + 1; i++) {
-                                                                                    
-                                                                                    worked = [students retrieve: oldStudent at: i];
-                                                                                    
-                                                                                    //if it was successful in finding someone...
-                                                                                    if (worked) {
-                                                                                        
-                                                                                        //print First Name, Last Name, and ID Number, common to all people
-                                                                                        NSLog(@"First Name: %@", (getFirstName = [oldStudent]);
-                                                                                              NSLog(@"Last Name: %@", (getLastName = [oldStudent]);
-                                                                                                    NSLog(@"ID: %@", (getIDNum = [oldStudent]);
-                                                                                                          
-                                                                                                          //if the person is a student...
-                                                                                                          if((getStatus = [oldStudent]) == YES) {
-                                                                                                              
-                                                                                                              //print GPA, Major, and Graduation Year
-                                                                                                              NSLog(@"GPA: %@", (getGPA = [oldStudent]);
-                                                                                                                    NSLog(@"Major: %@", (getMajor = [oldStudent]);
-                                                                                                                          NSLog(@"Graduation Year: %@", (getGradYear = [oldStudent]);
-                                                                                                                                
-                                                                                                                                } else { //if the person is a teacher...
-                                                                                                                                    
-                                                                                                                                    //print Tenure, Salary, and Department
-                                                                                                                                    
-                                                                                                                                    NSLog(@"", getTenureStatus = [oldStudent]);
-                                                                                                                                    if (getTenureStatus = [oldStudent]) {
-                                                                                                                                        printf("Tenure: yes");
-                                                                                                                                    } else {
-                                                                                                                                        printf("Tenure: no");
-                                                                                                                                    }
-                                                                                                                                    NSLog(@"Salary: %@", (getSalary = [oldStudent]);
-                                                                                                                                          NSLog(@"Department: %@", (getDepartment = [oldStudent]);
-                                                                                                                                                }
-                                                                                                                                                
-                                                                                                                                                } else { //if there was an error in finding people, print error
-                                                                                                                                                    printf("Retreive failed");
-                                                                                                                                                }
-                                                                                                                                                printf("");
-                                                                                                                                                }
-                                                                                                                                                }
-                                                                                                                                                //loops back through the choices if the user wants to make another selection
-                                                                                                                                                printf("");
-                                                                                                                                                printf("Would you like to make another selection? [y/n]: ");
-                                                                                                                                                scanf(%s, answer);
-                                                                                                                                                }
-                                                                                                                                                return 0;
-                                                                                                                                                } //end of file
+                        worked = [students retrieve: oldStudent at: i];
+                                      
+                        //if it was successful in finding someone...
+                        if (worked) {
+                                          
+                            //print First Name, Last Name, and ID Number, common to all people
+                            NSLog(@"First Name: %@", [oldStudent getFirstName:[Student Class]]);
+                            NSLog(@"Last Name: %@", [oldStudent getLastName:[Student Class]]);
+                            NSLog(@"ID: %@", [oldStudent getIDNum:[Student Class]]);
+                                          
+                            //if the person is a student...
+                            if ([oldStudent getStatus:[Student class]] == YES) {
+                                              
+                                //print GPA, Major, and Graduation Year
+                                NSLog(@"GPA: %@", [oldStudent getGPA:[Student Class]]);
+                                NSLog(@"Major: %@", [oldStudent getMajor:[Student Class]]);
+                                NSLog(@"Graduation Year: %@", [oldStudent getGradYear:[Student Class]]);
+                                              
+                            } else { //if the person is a teacher...
+                                              
+                                //print Tenure, Salary, and Department
+                                              
+                                NSLog(@"", [oldStudent getTenureStatus:[Student Class]]);
+                                if ([oldStudent getTenureStatus:[Student class]]) {
+                                    printf("Tenure: yes");
+                                } else {
+                                    printf("Tenure: no");
+                                }
+                                NSLog(@"Salary: %@", [oldStudent getSalary:[Student Class]]);
+                                NSLog(@"Department: %@", [oldStudent getDepartment:[Student Class]]);
+                            }
+                                          
+                        } else { //if there was an error in finding people, print error
+                            printf("Retreive failed");
+                        }
+                        printf("");
+                    }
+                }
+                //loops back through the choices if the user wants to make another selection
+                printf("");
+                printf("Would you like to make another selection? [y/n]: ");
+                scanf(%s, answer);
+            }
+            return 0;
+        } //end of file
