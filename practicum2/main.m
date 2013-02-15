@@ -325,15 +325,15 @@ int main(int argc, const char * argv[]) {
                     NSLog(@"ID: %d", oldStudent.IDNum);
                     
                     //if the person is a student...
-                    if ([oldStudent getStatus:[Student Class]] == YES) {
-                        NSLog(@"Major: %@", [oldStudent getMajor:[Student Class]];
-                        NSLog(@"Graduation Year: %@", [oldStudent getGradYear:[Student]]);
+                    if (oldStudent.status == YES) {
+                        NSLog(@"Major: %@", oldStudent.major);
+                        NSLog(@"Graduation Year: %@", oldStudent.year);
                     } else { //if the person is a teacher...
                                   
                         //print Tenure, Salary, and Department
-                        NSLog(@"Tenure: %@", [oldStudent getTenureStatus:[Student Class]]);
-                        NSLog(@"Salary: %@", [oldStudent getSalary:[Student Class]]);
-                        NSLog(@"Department: %@", [oldStudent getDepartment:[Student Class]]);
+                        NSLog(@"Tenure: %@", oldStudent.tenure);
+                        NSLog(@"Salary: %@", oldStudent.salary);
+                        NSLog(@"Department: %@", oldStudent.department);
                                   
                     }
                               
@@ -354,30 +354,30 @@ int main(int argc, const char * argv[]) {
                     if (worked) {
                                           
                         //print First Name, Last Name, and ID Number, common to all people
-                        NSLog(@"First Name: %@", [oldStudent getFirstName:[Student Class]]);
-                        NSLog(@"Last Name: %@", [oldStudent getLastName:[Student Class]]);
-                        NSLog(@"ID: %@", [oldStudent getIDNum:[Student Class]]);
+                        NSLog(@"First Name: %@", oldStudent.firstName);
+                        NSLog(@"Last Name: %@", oldStudent.lastName);
+                        NSLog(@"ID: %@", oldStudent.IDNum);
                                           
                         //if the person is a student...
-                        if ([oldStudent getStatus:[Student class]] == YES) {
+                        if (oldStudent.status == YES) {
                                               
                             //print GPA, Major, and Graduation Year
-                            NSLog(@"GPA: %@", [oldStudent getGPA:[Student Class]]);
-                            NSLog(@"Major: %@", [oldStudent getMajor:[Student Class]]);
-                            NSLog(@"Graduation Year: %@", [oldStudent getGradYear:[Student Class]]);
+                            NSLog(@"GPA: %@", oldStudent.GPA);
+                            NSLog(@"Major: %@", oldStudent.major);
+                            NSLog(@"Graduation Year: %@", oldStudent.year);
                                               
                         } else { //if the person is a teacher...
                                               
                             //print Tenure, Salary, and Department
                             
-                            NSLog(@"", [oldStudent getTenureStatus:[Student Class]]);
-                            if ([oldStudent getTenureStatus:[Student class]]) {
+                            NSLog(@"", oldStudent.tenure);
+                            if (oldStudent.tenure) {
                                 printf("Tenure: yes");
                             } else {
                                 printf("Tenure: no");
                             }
-                            NSLog(@"Salary: %@", [oldStudent getSalary:[Student Class]]);
-                            NSLog(@"Department: %@", [oldStudent getDepartment:[Student Class]]);
+                            NSLog(@"Salary: %@", oldStudent.salary);
+                            NSLog(@"Department: %@", oldStudent.department);
                         }
                         
                     } else { //if there was an error in finding people, print error
@@ -389,7 +389,7 @@ int main(int argc, const char * argv[]) {
             //loops back through the choices if the user wants to make another selection
             printf("");
             printf("Would you like to make another selection? [y/n]: ");
-            scanf(%s, answer);
+            scanf("%s", &answer);
         }
         return 0;
     } //end of file
