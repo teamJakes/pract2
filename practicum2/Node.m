@@ -23,7 +23,7 @@
     return nil;
 }
 
-- (id) initWithData: (ListItemType) a andNext: (Node *) b
+- (id) initWithData: (ListItemType *) a andNext: (Node *) b
 {
     if (self = [super init]) {
         next = b;

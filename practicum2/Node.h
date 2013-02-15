@@ -11,16 +11,16 @@ typedef Person ListItemType;
 
 //constructs object
 @interface Node : NSObject {
-    ListItemType data;
+    ListItemType *data;
     Node *next;
 }
 
 //properties
-@property (nonatomic, assign) ListItemType data;
+@property (nonatomic, assign) ListItemType *data;
 @property (nonatomic, retain) Node *next;
 
 - (id) init;
 
-- (id) initWithData: (ListItemType) a andNext: (Node *) b;
+- (id) initWithData: (ListItemType *) a andNext: (Node *) b;
 
 @end
