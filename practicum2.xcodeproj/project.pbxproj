@@ -11,6 +11,7 @@
 		421BF91B16C6EF1300FD7852 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421BF91A16C6EF1300FD7852 /* Foundation.framework */; };
 		421BF91E16C6EF1300FD7852 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 421BF91D16C6EF1300FD7852 /* main.m */; };
 		421BF92216C6EF1300FD7852 /* practicum2.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 421BF92116C6EF1300FD7852 /* practicum2.1 */; };
+		42CD2CB816CC96A700C15907 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CD2CB716CC96A700C15907 /* Node.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		421BF91D16C6EF1300FD7852 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		421BF92016C6EF1300FD7852 /* practicum2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "practicum2-Prefix.pch"; sourceTree = "<group>"; };
 		421BF92116C6EF1300FD7852 /* practicum2.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = practicum2.1; sourceTree = "<group>"; };
+		42CD2CB616CC96A700C15907 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		42CD2CB716CC96A700C15907 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				4211090616C810340090A2A9 /* Person.h */,
+				42CD2CB616CC96A700C15907 /* Node.h */,
+				42CD2CB716CC96A700C15907 /* Node.m */,
 				4211090716C811960090A2A9 /* Person.m */,
 				421BF91D16C6EF1300FD7852 /* main.m */,
 				421BF92116C6EF1300FD7852 /* practicum2.1 */,
@@ -146,6 +151,7 @@
 			files = (
 				421BF91E16C6EF1300FD7852 /* main.m in Sources */,
 				4211090816C811960090A2A9 /* Person.m in Sources */,
+				42CD2CB816CC96A700C15907 /* Node.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
