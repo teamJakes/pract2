@@ -17,6 +17,9 @@
  * Return Values: 0 when finished
  * Global Constants Used: none
  */
+
+// ^_^ comments -_-
+
 int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
