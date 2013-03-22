@@ -22,5 +22,5 @@ typedef Person ListItemType;
 - (id) init;
 
 - (id) initWithData: (ListItemType) a andNext: (Node *) b;
-
+//a comment
 @end
